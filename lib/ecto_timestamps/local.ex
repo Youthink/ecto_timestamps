@@ -12,7 +12,7 @@ defmodule EctoTimestamps.Local do
   def erl_load({{year, month, day}, {hour, min, sec, usec}}) do
     %DateTime{
       year: year, month: month, day: day,
-      hour: hour, min: min,     sec: sec, usec: usec
+      hour: hour, minute: min, second: sec, microsecond: usec
     }
   end
 end
