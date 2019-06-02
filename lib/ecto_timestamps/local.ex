@@ -10,7 +10,7 @@ defmodule EctoTimestamps.Local do
     erl_load({date, {h, m, s, usec}})
   end
   def erl_load({{year, month, day}, {hour, min, sec, usec}}) do
-    %DateTime{
+    %NaiveDateTime{
       year: year, month: month, day: day,
       hour: hour, minute: min, second: sec, microsecond: usec
     }
