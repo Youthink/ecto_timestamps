@@ -14,5 +14,6 @@ defmodule EctoTimestamps.Local do
       year: year, month: month, day: day,
       hour: hour, minute: min, second: sec, microsecond: usec
     }
+    |> NaiveDateTime.truncate(:second)
   end
 end
