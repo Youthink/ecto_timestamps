@@ -4,7 +4,7 @@ defmodule EctoTimestamps.Mixfile do
   def project do
     [
       app: :ecto_timestamps,
-      version: "1.0.0",
+      version: "2.0.0",
       elixir: "~> 1.2",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
@@ -46,7 +46,7 @@ defmodule EctoTimestamps.Mixfile do
   defp package do
     [
       files: ["lib", "mix.exs", "README.md"],
-      maintainers: ["developerworks"],
+      maintainers: ["developerworks", "Youthink"],
       licenses: ["Apache 2.0"],
       links: %{
         "GitHub" => "https://github.com/developerworks/ecto_timestamps",
