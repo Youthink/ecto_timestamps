@@ -6,11 +6,11 @@ defmodule EctoTimestamps.Mixfile do
       app: :ecto_timestamps,
       version: "1.0.0",
       elixir: "~> 1.2",
-      build_embedded: Mix.env == :prod,
-      start_permanent: Mix.env == :prod,
-      description: description,
-      package: package,
-      deps: deps
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
+      deps: deps()
     ]
   end
 
@@ -50,8 +50,8 @@ defmodule EctoTimestamps.Mixfile do
       licenses: ["Apache 2.0"],
       links: %{
         "GitHub" => "https://github.com/developerworks/ecto_timestamps",
-        "Docs"   => "https://github.com/developerworks/ecto_timestamps/blob/master/README.md"
+        "Docs" => "https://github.com/developerworks/ecto_timestamps/blob/master/README.md"
       }
-   ]
+    ]
   end
 end

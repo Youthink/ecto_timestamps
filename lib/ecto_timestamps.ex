@@ -1,3 +1,2 @@
 defmodule EctoTimestamps do
-
 end
