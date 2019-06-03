@@ -10,10 +10,17 @@ defmodule EctoTimestamps.Local do
     erl_load({date, {h, m, s, usec}})
   end
   def erl_load({{year, month, day}, {hour, min, sec, usec}}) do
-    %NaiveDateTime{
-      year: year, month: month, day: day,
-      hour: hour, minute: min, second: sec, microsecond: usec
-    }
-    |> NaiveDateTime.truncate(:second)
+    datetime =
+      %NaiveDateTime{
+        year: year, month: month, day: day,
+        hour: hour, minute: min, second: sec, microsecond: usec
+      }
+
+    if usec === 0 do
+      datetime
+      |> NaiveDateTime.truncate(:second)
+    else
+      datetime
+    end
   end
 end
